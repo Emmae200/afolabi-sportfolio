@@ -1,0 +1,129 @@
+.resumeContainer {
+  width: 800px;
+  min-height: 1131px; /* A4 aspect ratio */
+  background: white;
+  color: black;
+  font-family: 'Inter', system-ui, sans-serif;
+  padding: 60px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.nameBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+
+.contactInfo {
+  font-size: 10px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.roleBlock {
+  text-align: right;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+
+.mainTitle {
+  font-size: 130px;
+  font-weight: 600;
+  letter-spacing: -4px;
+  line-height: 1;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  margin-bottom: 16px;
+}
+
+.itemRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+
+.itemLeft {
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+}
+
+.itemTitle {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.itemSubtitle {
+  font-size: 11px;
+  color: #333;
+  margin-top: 2px;
+}
+
+.itemDate {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.skillsColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skillItem {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.profileImage {
+  width: 140px;
+  height: 180px;
+  object-fit: cover;
+  filter: grayscale(100%);
+  margin-bottom: -18px; /* Compensates for the text descent space so it rests perfectly on the baseline */
+}

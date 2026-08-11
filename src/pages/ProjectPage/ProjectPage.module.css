@@ -1,0 +1,251 @@
+.projectPage {
+  padding-top: calc(var(--nav-height) + var(--space-md));
+}
+
+.backNav {
+  margin-bottom: var(--space-xl);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: var(--text-primary);
+}
+
+/* Editorial Hero */
+.editorialHero {
+  padding-bottom: var(--space-2xl);
+}
+
+.editorialHeroHeader {
+  margin-bottom: var(--space-xl);
+}
+
+.editorialHeroMeta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+  padding-top: var(--space-2xl);
+  border-top: 1px solid var(--border-color);
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.metaItem .t-body {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.heroImageWrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .editorialHeroMeta {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+}
+
+/* Overview */
+.overviewSection {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.overviewContent .t-section {
+  margin-bottom: var(--space-lg);
+}
+
+.overviewContent .t-body {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .overviewContent, .heroHeader {
+    text-align: center;
+  }
+}
+
+/* Identity */
+.identitySection {
+  background: var(--bg-secondary);
+  border-radius: 40px;
+  margin: var(--space-2xl) var(--space-lg);
+  padding: var(--space-3xl) 0;
+}
+
+.identityGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+}
+
+.colorPalette {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.colorSwatch {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.typographyCard {
+  background: var(--bg-primary);
+  padding: var(--space-xl);
+  border-radius: 24px;
+}
+
+.typeScale {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  margin-top: var(--space-md);
+}
+
+@media (max-width: 768px) {
+  .identitySection {
+    margin: var(--space-xl) 0;
+    border-radius: 0;
+  }
+  .identityGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Features & UI Moments */
+.uiMomentsHeader {
+  margin-bottom: var(--space-3xl);
+  text-align: center;
+}
+
+.uiMomentsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+}
+
+.uiMoment {
+  display: flex;
+  flex-direction: column;
+}
+
+.momentCropWrapper {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: var(--bg-secondary);
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+}
+
+.momentCropImgTop {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.5s var(--ease-smooth);
+}
+
+.momentCropImgCenter {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s var(--ease-smooth);
+}
+
+.momentCropWrapper:hover img {
+  transform: scale(1.05);
+}
+
+.featureRow {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.featureText .t-section {
+  margin-bottom: var(--space-md);
+}
+
+.featureImage {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 768px) {
+  .uiMomentsGrid {
+    grid-template-columns: 1fr;
+  }
+  .featureRow {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+  .featureText {
+    text-align: center;
+  }
+}
+
+/* Final Gallery */
+.finalGallery {
+  background: #111111;
+  padding: var(--space-3xl) 0;
+  margin-top: var(--space-3xl);
+}
+
+.galleryImage {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 24px;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.3);
+}
+
+/* Next Project */
+.nextProject {
+  text-align: center;
+  padding: var(--space-3xl) 0;
+}
+
+.nextProjectLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  margin-top: var(--space-md);
+  color: var(--text-primary);
+  transition: opacity 0.3s ease;
+}
+
+.nextProjectLink:hover {
+  opacity: 0.6;
+}
+
+.nextArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
