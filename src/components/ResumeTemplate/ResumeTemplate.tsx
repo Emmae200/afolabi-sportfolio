@@ -1,7 +1,7 @@
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import styles from './ResumeTemplate.module.css';
 
-export const ResumeTemplate = forwardRef<HTMLDivElement>((props, ref) => {
+export const ResumeTemplate = forwardRef<HTMLDivElement>((_, ref) => {
   return (
     <div ref={ref} className={styles.resumeContainer}>
       <header className={styles.headerRow}>
