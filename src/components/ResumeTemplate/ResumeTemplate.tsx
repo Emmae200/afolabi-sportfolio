@@ -14,8 +14,7 @@ export const ResumeTemplate = forwardRef<HTMLDivElement>((_, ref) => {
           </div>
         </div>
         <div className={styles.roleBlock}>
-          UI Designer<br/>
-          Product Designer
+          Design Engineer
         </div>
       </header>
 
@@ -88,11 +87,10 @@ export const ResumeTemplate = forwardRef<HTMLDivElement>((_, ref) => {
             <div className={styles.skillItem}>AI Interfaces</div>
           </div>
           <div className={styles.skillsColumn}>
-            <div className={styles.skillItem}>Figma</div>
-            <div className={styles.skillItem}>Canva</div>
-            <div className={styles.skillItem}>Photoshop</div>
+            <div className={styles.skillItem}>Figma & Canva</div>
             <div className={styles.skillItem}>HTML / CSS / JavaScript</div>
-            <div className={styles.skillItem}>Ionic React / TypeScript</div>
+            <div className={styles.skillItem}>React Native</div>
+            <div className={styles.skillItem}>React & TypeScript</div>
             <div className={styles.skillItem}>GitHub</div>
           </div>
         </div>

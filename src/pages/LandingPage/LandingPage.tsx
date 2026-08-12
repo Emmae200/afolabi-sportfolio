@@ -44,8 +44,8 @@ export function LandingPage() {
   const featuredProjects = projects.slice(0, 2);
 
   const skills = [
-    'UI Design', 'Design Systems', 'Mobile Design', 'SaaS',
-    'Brand Identity', 'Motion Design', 'Figma', 'Prototyping'
+    'UI/UX Design', 'Design Engineering', 'Mobile App Design', 'SaaS Interfaces',
+    'HTML / CSS / JavaScript', 'React Native', 'Figma', 'Prototyping'
   ];
 
   const experience = [
@@ -99,11 +99,11 @@ export function LandingPage() {
             <div className={`${styles.heroMetaRow} fade-in-up`} style={{ animationDelay: '0.2s' }}>
               <div className={styles.heroDescription}>
                 <p className="t-body" style={{ color: 'var(--text-primary)', fontWeight: 500 }}>
-                  A visionary product designer from Nigeria, focusing on mobile products, AI interfaces, and digital experiences that blend artistry with functional innovation.
+                  A visionary design engineer from Nigeria, focusing on mobile products, AI interfaces, and digital experiences that blend artistry with functional innovation.
                 </p>
               </div>
               <div className={styles.heroTags}>
-                <p className="t-caption">UI DESIGN / AI / MOBILE / SAAS</p>
+                <p className="t-caption">DESIGN ENGINEERING / AI / MOBILE / SAAS</p>
                 <p className="t-caption">BASED IN NIGERIA &mdash; AVAILABLE WORLDWIDE</p>
               </div>
             </div>

@@ -95,7 +95,7 @@ img, video {
 }
 
 /* Typography Scale */
-.t-display { font-family: var(--font-sans); font-weight: 600; font-size: clamp(3rem, 10vw, 9rem); letter-spacing: -0.05em; line-height: 0.9; text-transform: uppercase; }
+.t-display { font-family: var(--font-sans); font-weight: 600; font-size: clamp(2.5rem, 8vw, 9rem); letter-spacing: -0.05em; line-height: 0.9; text-transform: uppercase; word-break: break-word; }
 .t-hero { font-family: var(--font-serif); font-weight: 400; font-size: clamp(3rem, 8vw, 7rem); letter-spacing: -0.02em; line-height: 1; }
 .t-section { font-family: var(--font-sans); font-size: clamp(2rem, 5vw, 4.5rem); letter-spacing: -0.04em; font-weight: 600; text-transform: uppercase; }
 .t-subtitle { font-family: var(--font-sans); font-size: clamp(1.25rem, 2vw, 1.75rem); color: var(--text-secondary); font-weight: 400; }
