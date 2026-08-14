@@ -67,3 +67,16 @@
   opacity: 1;
   transform: scale(1.02);
 }
+
+@media (max-width: 768px) {
+  .nav-links {
+    gap: var(--space-sm);
+  }
+  .nav-link {
+    font-size: 0.85rem;
+  }
+  .contact-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}

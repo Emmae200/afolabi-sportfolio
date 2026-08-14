@@ -111,12 +111,14 @@ img, video {
 }
 
 .section {
-  padding: var(--space-2xl) 0;
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
 }
 
 @media (max-width: 768px) {
   .section {
-    padding: var(--space-xl) 0;
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
   }
 }
 
