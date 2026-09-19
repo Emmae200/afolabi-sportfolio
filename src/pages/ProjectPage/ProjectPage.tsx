@@ -66,12 +66,33 @@ export function ProjectPage() {
 
       </header>
 
-      {/* Project Overview */}
+      {/* Project Narrative */}
       <section className={`section container ${styles.overviewSection}`}>
-        <div className={`reveal ${styles.overviewContent}`}>
+        <div className={`reveal ${styles.overviewContent}`} style={{ marginBottom: 'var(--space-2xl)' }}>
           <h2 className="t-section">Overview</h2>
           <p className="t-body">{project.overview}</p>
         </div>
+
+        {project.problem && (
+          <div className={`reveal ${styles.overviewContent}`} style={{ marginBottom: 'var(--space-2xl)' }}>
+            <h2 className="t-section">The Problem</h2>
+            <p className="t-body">{project.problem}</p>
+          </div>
+        )}
+
+        {project.process && (
+          <div className={`reveal ${styles.overviewContent}`} style={{ marginBottom: 'var(--space-2xl)' }}>
+            <h2 className="t-section">Process & Approach</h2>
+            <p className="t-body">{project.process}</p>
+          </div>
+        )}
+
+        {project.results && (
+          <div className={`reveal ${styles.overviewContent}`}>
+            <h2 className="t-section">Results & Impact</h2>
+            <p className="t-body">{project.results}</p>
+          </div>
+        )}
       </section>
 
       {/* Visual Identity */}

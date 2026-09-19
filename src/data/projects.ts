@@ -20,6 +20,9 @@ export interface Project {
   featureRowImage?: string;
   finalGallery: string;
   overview: string;
+  problem?: string;
+  process?: string;
+  results?: string;
   color1: string;
   color2: string;
   color3: string;
@@ -58,6 +61,9 @@ export const projects: Project[] = [
     featureRowText: 'An intelligent overview prioritizing what matters most. The layout uses generous whitespace to prevent information overload, keeping the interface feeling effortless.',
     finalGallery: '/Onboarding Page 1-portrait.png',
     overview: 'UniFlow re-imagines the student experience by consolidating scheduling, tasks, and study sessions into one intelligent interface. The goal was to reduce cognitive load and create a calm, focused environment where students can simply get work done, assisted by seamless AI integration.',
+    problem: 'University students frequently juggle multiple disconnected apps for scheduling, note-taking, and task management, leading to fragmented workflows and cognitive overload.',
+    process: 'I conducted user research to identify key pain points in student workflows. This led to designing a unified, AI-assisted platform that prioritizes a clean, distraction-free interface. The design system was built from the ground up to support dense information architecture while remaining visually breathable.',
+    results: 'The resulting MVP design established a strong product vision, enabling the team to secure initial user testing feedback that validated the core value proposition of a unified workspace.',
     color1: '#FFFFFF', color2: '#2ECA7F', color3: '#1A3626',
     typography: 'Nunito',
     typographyDesc: 'Friendly, rounded, and approachable.'
@@ -88,6 +94,9 @@ export const projects: Project[] = [
     featureRowText: 'Designed to create an immediate emotional connection. The interface utilizes a striking, editorial aesthetic with refined typography and evocative imagery to invite users into the experience.',
     finalGallery: '/Onboarding01_2560x1664-front.png',
     overview: 'Luncheon started as a side project for my department to help students find a date for our upcoming departmental luncheon. I designed the interface to lean into a highly polished, editorial aesthetic with refined typography and generous whitespace, creating a seamless and delightful experience for discovering social connections.',
+    problem: 'Students needed a low-friction, engaging way to find dates for a departmental event without the stigma or complexity of traditional dating apps.',
+    process: 'I designed a streamlined onboarding flow and discovery feed that feels more like browsing a high-end editorial magazine than a dating app. The focus was on high-quality imagery, elegant typography (Playfair Display), and subtle micro-interactions to elevate the user experience.',
+    results: 'The app concept generated significant excitement within the department, serving as a successful proof-of-concept for localized, event-based social matching.',
     color1: '#3B0D11', color2: '#FDFBF7', color3: '#5D2A2E',
     typography: 'Playfair Display',
     typographyDesc: 'Elegant, editorial, and sophisticated.'

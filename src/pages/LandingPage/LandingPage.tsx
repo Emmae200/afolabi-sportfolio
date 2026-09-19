@@ -12,12 +12,14 @@ export function LandingPage() {
   useReveal();
   const resumeRef = useRef<HTMLDivElement>(null);
   const [isGenerating, setIsGenerating] = useState(false);
+  const [downloadSuccess, setDownloadSuccess] = useState(false);
 
   const handleDownloadResume = async (e: React.MouseEvent) => {
     e.preventDefault();
     if (!resumeRef.current || isGenerating) return;
     
     setIsGenerating(true);
+    setDownloadSuccess(false);
     try {
       const canvas = await html2canvas(resumeRef.current, { 
         scale: 2,
@@ -34,6 +36,8 @@ export function LandingPage() {
       
       pdf.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height);
       pdf.save('Afolabi_Emmanuel_Resume.pdf');
+      setDownloadSuccess(true);
+      setTimeout(() => setDownloadSuccess(false), 3000);
     } catch (err) {
       console.error('Error generating PDF', err);
     } finally {
@@ -41,7 +45,7 @@ export function LandingPage() {
     }
   };
 
-  const featuredProjects = projects.slice(0, 2);
+  const featuredProjects = projects.slice(0, 4);
 
   const skills = [
     'UI/UX Design', 'Design Engineering', 'Mobile App Design', 'SaaS Interfaces',
@@ -174,11 +178,11 @@ export function LandingPage() {
                   I specialize in designing modern mobile apps, SaaS platforms, and AI-driven products. My approach focuses on thoughtful visual systems, consistent design languages, and interfaces that feel effortless to use.
                 </p>
                 <p className="t-body" style={{ marginBottom: 'var(--space-lg)' }}>
-                  From establishing design systems to refining the smallest interaction, I enjoy transforming complex ideas into elegant, user-friendly experiences. Currently completing my BSc in Management Information System at Covenant University.
+                  From establishing design systems to refining the smallest interaction, I enjoy transforming complex ideas into elegant, user-friendly experiences. Currently completing my BSc in Management Information Systems at Covenant University.
                 </p>
                 <div className={`reveal ${styles.resumeAction}`}>
                   <a href="#" onClick={handleDownloadResume} className={styles.downloadBtn}>
-                    <ArrowDownToLine size={20} /> {isGenerating ? 'Generating PDF...' : 'Download Resume'}
+                    <ArrowDownToLine size={20} /> {isGenerating ? 'Generating PDF...' : downloadSuccess ? 'Downloaded!' : 'Download Resume'}
                   </a>
                 </div>
               </div>
@@ -212,14 +216,77 @@ export function LandingPage() {
         </div>
       </section>
 
-      {/* Contact CTA */}
-      <section className={`section ${styles.contactSection}`}>
-        <div className="container reveal" style={{ textAlign: 'left' }}>
-          <h2 className="t-display" style={{ marginBottom: 'var(--space-2xl)' }}>LET'S MAKE<br/>SOMETHING<br/>BEAUTIFUL.</h2>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-lg)' }}>
-            <p className="t-subtitle">Have a project in mind?</p>
-            <a href="mailto:afolabiolufemi@icloud.com" className="t-subtitle" style={{ color: 'var(--text-primary)', borderBottom: '1px solid var(--text-primary)' }}>Let's talk &rarr;</a>
+      {/* Services & Testimonials */}
+      <section className={`section container ${styles.servicesSection}`}>
+        <div className={styles.servicesWrapper}>
+          <div className="reveal">
+            <h2 className="t-display" style={{ marginBottom: 'var(--space-2xl)' }}>WHAT I DO.</h2>
+            <div className={styles.servicesGrid}>
+              <div className={styles.serviceCard}>
+                <h3 className="t-section">UI/UX Design</h3>
+                <p className="t-body">Crafting intuitive, highly polished interfaces for web and mobile applications with a focus on editorial aesthetics.</p>
+                <span className="t-caption" style={{ marginTop: 'var(--space-md)', display: 'block' }}>Starts at $1k</span>
+              </div>
+              <div className={styles.serviceCard}>
+                <h3 className="t-section">Design Systems</h3>
+                <p className="t-body">Building scalable, accessible, and maintainable component libraries that bridge the gap between design and engineering.</p>
+                <span className="t-caption" style={{ marginTop: 'var(--space-md)', display: 'block' }}>Starts at $2k</span>
+              </div>
+              <div className={styles.serviceCard}>
+                <h3 className="t-section">Product Strategy</h3>
+                <p className="t-body">Translating complex business requirements into user-centered product flows and MVP architectures.</p>
+                <span className="t-caption" style={{ marginTop: 'var(--space-md)', display: 'block' }}>Consulting</span>
+              </div>
+            </div>
           </div>
+          
+          <div className={`reveal ${styles.testimonialWrapper}`} style={{ marginTop: 'var(--space-3xl)' }}>
+            <h2 className="t-display" style={{ marginBottom: 'var(--space-2xl)' }}>WHAT THEY SAY.</h2>
+            <div className={styles.testimonialCard}>
+              <p className="t-subtitle" style={{ color: 'var(--text-primary)', fontStyle: 'italic', marginBottom: 'var(--space-lg)' }}>
+                "Afolabi possesses a rare combination of strong visual aesthetic and deep technical understanding. His work on our team consistently elevated our product standards and accelerated our engineering handoffs."
+              </p>
+              <div className={styles.testimonialAuthor}>
+                <span className="t-body" style={{ fontWeight: 600, display: 'block', color: 'var(--text-primary)' }}>Project Manager</span>
+                <span className="t-caption">International Energy Services Limited (IESL)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className={`section ${styles.contactSection}`}>
+        <div className={`container reveal ${styles.contactLayout}`}>
+          <div className={styles.contactInfoBlock}>
+            <div className={styles.availabilityBadge}>
+              <div className={styles.statusDot}></div>
+              <span className="t-caption">AVAILABLE FOR FREELANCE PROJECTS</span>
+            </div>
+            <h2 className="t-display" style={{ margin: 'var(--space-lg) 0' }}>LET'S BUILD<br/>TOGETHER.</h2>
+            <p className="t-body" style={{ maxWidth: '400px', marginBottom: 'var(--space-xl)' }}>
+              Looking to launch a new product or elevate an existing one? I reply to all inquiries within 24 hours.
+            </p>
+            <a href="mailto:afolabiolufemi@icloud.com" className="t-subtitle" style={{ color: 'var(--text-primary)', borderBottom: '1px solid var(--text-primary)', display: 'inline-block' }}>afolabiolufemi@icloud.com</a>
+          </div>
+          
+          <form className={styles.contactForm} action="mailto:afolabiolufemi@icloud.com" method="post" encType="text/plain">
+            <div className={styles.formGroup}>
+              <label htmlFor="name" className="t-caption">YOUR NAME</label>
+              <input type="text" id="name" name="name" className={styles.formInput} placeholder="Jane Doe" required />
+            </div>
+            <div className={styles.formGroup}>
+              <label htmlFor="email" className="t-caption">EMAIL ADDRESS</label>
+              <input type="email" id="email" name="email" className={styles.formInput} placeholder="jane@example.com" required />
+            </div>
+            <div className={styles.formGroup}>
+              <label htmlFor="message" className="t-caption">PROJECT DETAILS</label>
+              <textarea id="message" name="message" className={styles.formInput} placeholder="Tell me about your project, timeline, and budget..." rows={4} required></textarea>
+            </div>
+            <button type="submit" className={styles.submitBtn}>
+              Send Inquiry <ArrowRight size={20} />
+            </button>
+          </form>
         </div>
       </section>
 
@@ -229,7 +296,9 @@ export function LandingPage() {
           <div className={styles.footerLinks}>
             <a href="#work" className="t-caption">Work</a>
             <a href="#about" className="t-caption">About</a>
-            <a href="mailto:afolabiolufemi@icloud.com" className="t-caption">Email</a>
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="t-caption">LinkedIn</a>
+            <a href="https://twitter.com" target="_blank" rel="noreferrer" className="t-caption">Twitter / X</a>
+            <a href="https://dribbble.com" target="_blank" rel="noreferrer" className="t-caption">Dribbble</a>
           </div>
           <div className="t-caption">&copy; {new Date().getFullYear()} Afolabi Emmanuel. All rights reserved.</div>
         </div>

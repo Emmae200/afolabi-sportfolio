@@ -366,10 +366,133 @@
   }
 }
 
-/* Contact CTA */
-.contactSection {
-  padding: var(--space-2xl) 0;
+/* Services & Testimonials */
+.servicesSection {
+  padding-top: var(--space-3xl);
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2xl);
   margin-top: var(--space-xl);
+}
+
+.serviceCard {
+  padding: var(--space-xl);
+  background: var(--bg-secondary);
+  border-radius: 24px;
+}
+
+.serviceCard h3 {
+  margin-bottom: var(--space-md);
+}
+
+.testimonialCard {
+  padding: var(--space-2xl);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+}
+
+@media (max-width: 768px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+/* Contact Section */
+.contactSection {
+  padding: var(--space-3xl) 0;
+  margin-top: var(--space-2xl);
+  background: var(--bg-secondary);
+}
+
+.contactLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+.availabilityBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 8px 16px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 99px;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  background: #2ECA7F;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(46, 202, 127, 0.5);
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  background: var(--bg-primary);
+  padding: var(--space-2xl);
+  border-radius: 24px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.formInput {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  padding: var(--space-sm) 0;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.formInput:focus {
+  outline: none;
+  border-bottom-color: var(--text-primary);
+}
+
+.formInput::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.5;
+}
+
+.submitBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-xl);
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border-radius: 40px;
+  font-weight: 500;
+  margin-top: var(--space-md);
+  transition: all 0.4s var(--ease-spring);
+}
+
+.submitBtn:hover {
+  transform: translateY(-4px);
+  opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+  .contactLayout {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Footer */
